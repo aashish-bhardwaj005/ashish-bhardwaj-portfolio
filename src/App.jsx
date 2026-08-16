@@ -10,6 +10,8 @@ import ResumeModal from './components/ResumeModal';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
@@ -81,6 +83,10 @@ export default function App() {
           onClose={() => setToastMessage(null)}
         />
       )}
+
+      {/* Vercel Analytics & Speed Insights */}
+      <Analytics />
+      <SpeedInsights />
     </div>
   );
 }
